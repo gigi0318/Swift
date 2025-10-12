@@ -7,13 +7,15 @@ Swift can be considered a multipurpose language but its main purpose why it came
 
  
 What is Swift used for?
+
 •	Mobile & desktop apps: Swift was mainly designed to address the issues that arised while making the iOS with the objective C. Thus swift is used to primarily build iOS, iPadOS, macOS, watchOS, tvOS (UIKit/AppKit/SwiftUI).
 •	Server‑side & APIs: Using frameworks like Vapor
 •	Scripting/CLIs: Quick utilities and automation with the swift interpreter
 •	Games: With Apple frameworks (SpriteKit, SceneKit) or engines that support Swift
 Swift is multi‑purpose. Example projects: iPhone apps with SwiftUI, REST APIs with Vapor, command‑line tools compiled with swiftc.
  
-Install Swift
+Install Swift:
+
 Pick one route for your computer.
 macOS (easiest)
 Since it was designed for Apple it is the easiest to install in macOS.
@@ -28,7 +30,8 @@ Windows 10/11
 If installation is tricky on Windows, using WSL (Ubuntu on Windows) is a good alternative; then use the Linux steps.
    
  
-Write and Run a simple Program
+Write and Run a simple Program:
+
 Now that swift is installed make a new file and name it HelloWorld.swift. 
 Code:
 Print(“Hello World!”)
@@ -43,7 +46,8 @@ swiftc HelloWorld.swift -o hello
 You should see:
 Hello, World!
  
-Comments in Swift
+Comments in Swift:
+
 There are two types of comments in swift.
 // Single-line comment- used for shorter comments 
 
@@ -54,7 +58,8 @@ There are two types of comments in swift.
    /* 		inner comment 				*/	
 Closing of outer comment */- these are also multi line commnets where there is one comment inside of the other 
 
-Editor / Environment
+Editor / Environment:
+
 •	Recommended (macOS): Xcode (full IDE, simulators, SwiftUI previews)
 •	Cross‑platform: VS Code + Swift extension (great for server‑side and CLIs)
 •	Learning/quick tests: Swift Playgrounds (Mac/iPad) 
@@ -63,6 +68,7 @@ You can pick whichever ones runs the most smoothly on your laptop environment.
 
 
 References:
+
 To learn swift:
 https://docs.vapor.codes/
 https://www.swift.org/documentation/?
