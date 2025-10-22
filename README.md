@@ -67,6 +67,103 @@ Closing of outer comment */- these are also multi line commnets where there is o
 
 You can pick whichever ones runs the most smoothly on your laptop environment. 
 
+**keywords/Reserved Words:**'
+Swift has a defined set of keywords (including contextual ones), but Apple doesn’t
+publish “the number” as a stable count—the list evolves with time. Here is some
+examples fo the keywords/reserved, (Any, as, catch, false, is etc the list goes on and
+can be found on the link provided)
+
+**Naming requirments and conevtions:**
+
+Naming rules forced by complier-
+
+-Names must begin with a letter or underscore (_), followed by letters, digits, or underscores.-=No spaces or special characters (like @, #, !).
+-Case-sensitive — myVar and MyVar are different.
+-Cannot use Swift keywords (e.g. class, func) as variable names unless enclosed in backticks (`class`).
+
+Naming Conventions (Community Standards):
+-Use camelCase for variables, constants, functions → userName, calculateTotal().
+-Use PascalCase for types like classes, structs, enums → UserProfile, FlightSchedule.
+-Constants and variables follow the same lowercase rule; no all-caps like MAX_VALUE.
+-Just a tip:Use clear, descriptive names instead of short or cryptic ones.
+-Methods can share a base name 
+
+**Statically typed:**
+Swift is statically typed with type inference (the compiler infers types but they’re checked at compile time). 
+
+**Strongly Typed**
+Swift does not allow us to mix unrelated types automatically we have to explicitly declare them.
+Every variable has a specific, declared (inferred) type, and that type cannot change once set. The type checking happens at the compile time. You don’t get implicit, lossy coercions across unrelated types; the compiler enforces type safety. 
+
+**Supports explicit and implicitly typed:**
+It supports both: we can declare types explicitly or the complier can do it.
+
+**Mutable/Immutable:**
+It lets us declare both types by following some rules-
+
+For Mutable type-
+var declares variables (mutable bindings)
+
+For Immutable type-
+let declares constants (immutable bindings)
+
+ This is enforced by the compiler. For value types (structs/enums), immutability also depends on whether the instance is stored in a let or var, and mutating methods are required to modify struct/enum state
+
+**Operators**
+Arithmetic (+ - * / %) for numeric types; overflow variants like &+ &- &*. Swift Documentation+1
+Comparison (== != < <= > >=) for comparable types. Swift Documentation
+Assignment/compound (=, +=, etc.). Swift Documentation
+Logical (! && ||) for Bool. Swift Documentation
+Range (..., ..<) for ranges/iteration. Swift Documentation
+Bitwise & shifting (~ & | ^ << >>) for integer types. 
+
+
+**Mixed Operations**
+Numeric operators generally do not implicitly mix types but if you perform an explicit conversion (Double(x), Int(y)) or use the same type on both sides it is allowed. 
+
+**Is Swift Bound**
+Identifier names (variables, types, functions)
+• Type binding: Compile time. Swift infers or checks the type at compile time and pins it (static types).
+• Address/storage binding: Run time.
+ Local let/var: address is bound upon creation of the stack frame on function entry.
+ Heap objects: address is bound upon you init/allocate.
+• Function/method calls:
+ Structs/enums/protocol extensions & final methods: static dispatch (resolved at compile time).
+ Class methods that are overridable: typically dynamic via vtable at run time.
+ Requirements of a protocol used through an existential (any P): run-time witness-table call.
+Symbols of operators (+, *, etc.)
+• Which to call: Compile time through overload resolution + generic constraints (operators are just functions).
+• How it's called: the chosen function is inlined or called normally. If the operator is a requirement of a protocol used through an existential, the call proceeds through a witness table at run time; otherwise it's resolved statically.
+
+Example code:
+ let x = "5" + 5 
+ swift has no + overload for (String,Int), thus it wont convert Int->String or vice versa. 
+
+ Correct way:
+ 
+ 1   let x = "5" +String(5) // convatenate as strings 
+     print(x)
+
+ 2   guard let five = Int("5") else { fatalError("not a number") // adds as number 
+     let x = five + 5 
+     print(x)
+
+ **Limitations**
+
+**Built-in complex data type**
+Swift does have several built in complex data types. 
+Here are a few the rest can be found on the official site for swift. 
+
+-let someArrays (Array<string>) – ordered collections of values of the same type.
+-let someDictionaries (Dictionary<Key, Value>) – unordered collections of key-value pairs.# strings are keys, integers are values. 
+-let someSets (Set<T>) – unordered collections of unique values.
+
+implicitly Unwrapped optional type:
+-varImplicitlyUnwrappedString: String! # it is automatically unwrapped when accessed.
+
+-var someTuple (top:Int. bottom:Int) – group multiple values into a single compound value.
+-var OptionalInteger: Int?  – is declare dto have a type of optional integer.
+
 
 **References:**
 
@@ -80,6 +177,8 @@ https://codewithchris.com/swift-tutorial-complete/?
 https://www.tutorialspoint.com/swift/index.htm? 
 https://developer.apple.com/tutorials/develop-in-swift/welcome-to-develop-in-swift-tutorials?
 wikipedia 
+https://microsoft.github.io/swift-guide/Naming.html?
+https://swiftbydeya.com/swift-keywords/
 Hacking with swift.com
 Youtube sean allen code with chris etc
 Reddit formus 
