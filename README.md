@@ -165,6 +165,52 @@ implicitly Unwrapped optional type:
 -var OptionalInteger: Int?  – is declare dto have a type of optional integer.
 
 
+
+**Boolean values**
+Is a type of value whose instances are either true or false.
+It does not use 0/1 but instead uses Bool in condionals. 
+
+https://developer.apple.com/documentation/Swift/Bool
+
+**Conditional Statments**
+Swift has if, else, else if, gaurd can be used in place of lese as an prceed only if earlier condtion is approved. There are switch statments present used for matching purposes. Basic switch statement, interval matching, compound cases are all types of switch statements. Ternary condtional operator can be used as a shorter way of writing standard if/else statement. 
+
+https://www.codecademy.com/learn/learn-swift/modules/learn-swift-conditionals/cheatsheet
+https://vikramios.medium.com/swift-conditional-statements-loops-and-switch-statements-77f9b488925b
+
+**Code blocks**
+Code blocks can be delimited using curly braces{} in swift.
+
+https://www.programiz.com/swift-programming/expressions-statements-blocks?
+
+**Short Circuit**
+Swift uses short circuit evalutions for its logical AND(&&) and logical OR(||) operators.
+
+https://medium.com/@ayshindhe/short-circuiting-in-swift-a-simple-explanation-5be8358f20ca
+
+**Dangleing else problem**
+To address thsi problem swift requires the use of curly braces {} to explicitly define teh scope of if and else blocks. This helps remove the ambiguity in nested if else statements.
+
+https://en.wikipedia.org/wiki/Dangling_else
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/statements/
+
+**Switch/Case behaviour**
+Swift does use switch/case statements and in the cases where it does use it, it does not require a explicit break because if a matching case is found the code executed in the switch statement will automatically exit. 
+
+The continue statement is used in loop constructs to stop the current loop from iterating and move onto to the next one. 
+
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/#Switch
+
+**Loop types and differences**
+Swift has the following types of loops, for in loop, while loop, repeat while loop, forEach loop.
+
+https://www.programiz.com/swift-programming/for-in-loop
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/
+
+**Scope of loop variable vs function block**
+In swift loop scope variable and function variables are not the same but they are similar.
+
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/declarations/
 **References:**
 
 To learn swift:
