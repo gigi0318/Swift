@@ -1,0 +1,47 @@
+let number = 10
+
+if number > 0 {
+    print("Positive number")
+} else if number < 0 {
+    print("Negative number")
+} else {
+    print("Number is zero")
+}
+
+let year = 2024
+
+if year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) {
+    print("\(year) is a leap year")
+} else {
+    print("\(year) is not a leap year")
+}
+let grade = "B"
+
+switch grade {
+case "A":
+    print("Excellent")
+case "B":
+    print("Good")
+case "C":
+    print("Average")
+case "D":
+    print("Below average")
+case "F":
+    print("Failed")
+default:
+    print("Invalid grade")
+}
+let number = 8
+
+if number > 0 && number % 2 == 0 {
+    print("\(number) is positive and even!")
+} else {
+    print("\(number) is either not positive or not even.")
+}
+let number = 7
+
+if number % 2 == 0 {
+    print("\(number) is even")
+} else {
+    print("\(number) is odd")
+}
