@@ -211,7 +211,69 @@ https://docs.swift.org/swift-book/documentation/the-swift-programming-language/c
 In swift loop scope variable and function variables are not the same but they are similar.
 
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/declarations/
+
+**Functions**
+
+**Syntax for function**
+
+The basic syntax to declare a function in Swift is “func” keyword followed by one or more named type values that the function takes as input, known as parameters. The function name is used to “call” the function and pass input values (also called arguments) that match the types of the function parameters. 
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions/
+
+**Function Placing**
+There is no particular order as to where the function has to be placed for it to run. The function can be anywhere in the file that is being run, and the compiler will parse through the file before running, thus the position of the function doesn't matter. The function has to be in scope for it to run. 
+https://www.appypievibe.ai/blog/swift-code/scope-context-swift-how-to/
+
+**Recursive Function**
+Yes, Swift supports recursion. Recursion is where a function calls itself ( can be used in scenarios like calculating a factorial of a number). 
+
+https://www.kodeco.com/books/swift-cookbook/v1.0/chapters/9-use-recursive-functions-in-swift
+
+**Multiple Parameters**
+Swift functions can accept multiple parameters. Yes, it can also take different data types. This can happen because each parameter is allowed to have a different type and still run. 
+
+Swift can return multiple values using a tuple, by making a compound value. The elements of a tuple can be given a name (alphabets or number).
+
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/
+
+**By Pass refrence**
+Swift's default is pass by value for parameters. For value types, a copy is passed for the ref types; the reference itself is passed by value.
+Value types (struct, enum, tuple) → stored directly (stack), copied on write
+Reference types (class, closure) → instance stored on heap, reference stored on stack
+In Swift, function arguments, parameters, and most local variables are stored on the stack when they are value types. If the variable is a reference type, the reference is stored on the stack, but the instance is allocated on the heap. Value types captured by closures or escaping the stack may also be moved to the heap.
+
+https://www.vadimbulavin.com/value-types-and-reference-types-in-swift/
+
+**Scoping rules**
+Code blocks are made using curly braces, and the code inside it remains inside that block; thus, when created, the visibility remains inside the block and will end suppose if the code block is destroyed. 
+Variables declared inside a function are local to the function itself.
+Anything outside that function will not be visible to the code inside that function.
+Globe scope is when the variable is declared outsid ethe function and classes and sis visible and can be asscced throught the code. 
+Inner scpe variable can access outer scope but not the other way round 
+
+**Side effects in swift**
+Side effects are possible in Swift. A function might change external state, such as by modifying a global variable, changing a class property, or altering in-out parameters. However, Swift encourages safer patterns and has guardrails (as that was one of the main goals of why swift was created)
+Design patterns and Swift APIs encourage the use of pure functions.
+let creates immutable values to avoid unintended mutation. Like this there are some other for which you can find the details in the link below. So, Swift does allow side effects; the language rules just prevent accidental shared state and mutation.
+
+https://forums.swift.org/t/side-effects/57084/3
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/memorysafety/
+
+
+**Local Variable Storing location**
+The local variables that are value types - usually Int, Struct, Bool, Tuple - are stored on the stack. Reference-type values (class instances) are allocated on the heap, and reference to them (the pointer) is stored on the stack. 
+
+https://www.vadimbulavin.com/value-types-and-reference-types-in-swift/
+
+**Other Characteristics**
+Swift has several other characteristics that are useful to know when learning about functions: Static vs dynamic dispatch: Value types struct/enum use static dispatch by default - i.e., compile-time binding. Classes can use dynamic dispatch by means of inheritance and override (runtime method lookup via v-table). First-class functions Functions can be stored in variables, passed as parameters, and returned by other functions. Closures: Swift does support closures - like lambdas - and they capture values from the surrounding scope.
+
+
+
+
+
+
 **References:**
+
 
 To learn swift:
 https://docs.vapor.codes/
