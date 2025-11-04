@@ -1,0 +1,53 @@
+let result1 = multiply(3, 7)
+let result2 = factorial(4)
+let (part1, part2) = splitString("HelloWorld")
+
+print(result1)  // 21
+print(result2)  // 24
+print(part1, part2)  // Hello World will print 
+
+
+
+
+
+
+
+func updateValues(num: Int, arr: [Int]) {
+    var newNum = num        
+    newNum += 10             
+    
+    var newArr = arr       
+    newArr.append(100)   
+    
+    print("Inside function → num: \(newNum), arr: \(newArr)")
+}
+
+
+
+
+
+var myNumber = 5
+var myArray = [1, 2, 3]
+
+print("Before func → myNumber: \(myNumber), myArray: \(myArray)")
+
+updateValues(num: myNumber, arr: myArray)
+
+print("After function → myNumber: \(myNumber), myArray: \(myArray)")
+
+
+
+
+
+
+
+
+func multiply(_ a: Int, _ b: Int) -> Int {
+    return a * b
+}
+let product = multiply(4, 5)
+print("Product:", product)
+
+
+
+
