@@ -1,0 +1,66 @@
+**Creating an object**
+
+class Person {
+    var firstName: String
+    var lastName: String
+    var age: Int
+    
+    init(firstName: String, lastName: String, age: Int) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.age = age
+    }
+}
+
+**Giving the object class atributes**
+
+var firstName: String
+var lastName: String
+var age: Int
+
+
+**Giving the object functions**
+
+func fullName() -> String {
+    return "\(firstName) \(lastName)"
+}
+
+func haveBirthday() {
+    age += 1
+    print("Happy birthday, \(fullName())! You are now \(age).")
+}
+
+**Creating an object that inherits from the first object :Person**
+
+class Student: Person {
+    var studentID: String
+    var gpa: Double
+    
+    init(firstName: String, lastName: String, age: Int, studentID: String, gpa: Double) {
+        self.studentID = studentID
+        self.gpa = gpa
+        super.init(firstName: firstName, lastName: lastName, age: age)
+    }
+    
+    override func fullName() -> String {
+        return "Student \(firstName) \(lastName)"
+    }
+    
+    func updateGPA(to newGPA: Double) {
+        gpa = newGPA
+    }
+}
+
+**Instantiate both types**
+
+let p = Person(firstName: "Spencer", lastName: "Lo", age: 18)
+print(p.fullName())
+p.haveBirthday()
+p.age = 21
+
+
+let s = Student(firstName: "Oscar", lastName: "Patel", age: 20, studentID: "S101", gpa: 3.4)
+print(s.fullName())      // overridden method
+s.updateGPA(to: 3.2)     // subclass-only method
+s.haveBirthday()         // inherited method
+s.firstName = "Sufi" // inherited property modified
