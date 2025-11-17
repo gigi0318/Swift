@@ -268,9 +268,55 @@ https://www.vadimbulavin.com/value-types-and-reference-types-in-swift/
 Swift has several other characteristics that are useful to know when learning about functions: Static vs dynamic dispatch: Value types struct/enum use static dispatch by default - i.e., compile-time binding. Classes can use dynamic dispatch by means of inheritance and override (runtime method lookup via v-table). First-class functions Functions can be stored in variables, passed as parameters, and returned by other functions. Closures: Swift does support closures - like lambdas - and they capture values from the surrounding scope.
 
 
+**Classes and inheritance**
+
+**Does Swift support objects or something similar**
+It folows the standard rules of coding convetions which can be found in other languages also like eg python. Swift is a object oriented programming language through classes and structures. 
 
 
 
+https://www.swift.org/documentation/api-design-guidelines/
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures/
+
+**Naming conventions for classes, instance variables, functions**
+
+Class names start with UpperCamelCase
+methods + properties with lowerCamelCase
+constants like let with lowerCamelCase
+Modules/Types with UpperCamelCase
+https://stackoverflow.com/questions/40228471/proper-namespacing-or-class-naming-convention-in-swift-frameworks-for-ios
+
+**Does swift have standard methods similar to toString() or __str__**
+Swift does not use toString() or __str__. It uses a standard way to get a string reprenstaion of an object by using String interpolation -> \(value). 
+
+example code:
+var myInteger:Int
+myInteger = 18
+let myString1 = " I love the number \(myInteger)"
+print(myString1)
+
+This way you can customize the string reprentaion of a object. 
+
+https://docs.swift.org/swift-book/documentation/the-swift-programming-language/stringsandcharacters/#String-Interpolation
+https://developer.apple.com/documentation/swift/customstringconvertible
+
+**Inhertance in Swift and Muliple Inheritance**
+Swift supports single inhertance for classes, meaning it can only inherit from a single other class. Multiple inheritance is not allowedin swift due as it adds significant complexity which swift does not handle. 
+But instead swift uses protocols which achives similar benefits as in multiple inheritance. In this a class can conform to multiple protocols and implemnt behaviors as defined by each of the different protocols.
+
+https://www.geeksforgeeks.org/swift/swift-inheritance/
+https://docs.swift.org/compiler/documentation/diagnostics/multiple-inheritance/
+
+**Overload methods**
+Swift allows method overloading, its where a class can have multiple methods with the same name but they have different signature. 
+Swift resolves the calls with the swifts complier, the complier examies the aviable methods in the classes and supperclasses. 
+
+https://stackoverflow.com/questions/64525102/swift-how-to-deal-with-method-overloads-where-only-the-return-type-differs-and
+
+**Important things to remember**
+Swift uses single inheritance but can use multple protocol which behave similar to multiple inhertance.
+classes are refrence typres while structs are value types 
+methods and properties must use override explicitly 
 
 **References:**
 
