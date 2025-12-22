@@ -1,4 +1,4 @@
-**Calling function**
+//Calling function
 let result1 = multiply(3, 7)
 let result2 = factorial(4)
 let (part1, part2) = splitString("HelloWorld")
@@ -8,14 +8,14 @@ print(result2)  // 24
 print(part1, part2)  // Hello World will print 
 
 
-**Recursive function: factorial**
+//Recursive function: factorial
 
 func factorial(_ n: Int) -> Int {
     if n <= 1 { return 1 }
     return n * factorial(n - 1)
 }
 
-**Pass by value**
+//Pass by value
 
 func updateValues(num: Int, arr: [Int]) {
     var newNum = num        
@@ -30,7 +30,7 @@ func updateValues(num: Int, arr: [Int]) {
 
 
 
-**Testing pass by value**
+//Testing pass by value
 var myNumber = 5
 var myArray = [1, 2, 3]
 
@@ -43,7 +43,7 @@ print("After function → myNumber: \(myNumber), myArray: \(myArray)")
 
 
 
-**Function with parameters and return value**
+//Function with parameters and return value
 
 
 
