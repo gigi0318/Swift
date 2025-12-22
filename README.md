@@ -177,7 +177,7 @@ implicitly Unwrapped optional type:
 -var someTuple (top:Int. bottom:Int) – group multiple values into a single compound value.
 -var OptionalInteger: Int?  – is declare dto have a type of optional integer.
 
-
+## 3. loops, if/else, switch, logical operators
 
 **Boolean values**
 
@@ -233,7 +233,7 @@ In swift loop scope variable and function variables are not the same but they ar
 
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/declarations/
 
-**Functions**
+## 4. Functions
 
 **Syntax for function**
 
@@ -297,7 +297,7 @@ https://www.vadimbulavin.com/value-types-and-reference-types-in-swift/
 Swift has several other characteristics that are useful to know when learning about functions: Static vs dynamic dispatch: Value types struct/enum use static dispatch by default - i.e., compile-time binding. Classes can use dynamic dispatch by means of inheritance and override (runtime method lookup via v-table). First-class functions Functions can be stored in variables, passed as parameters, and returned by other functions. Closures: Swift does support closures - like lambdas - and they capture values from the surrounding scope.
 
 
-**Classes and inheritance**
+## 5. Classes and inheritance
 
 **Does Swift support objects or something similar**
 
