@@ -68,6 +68,7 @@ Closing of outer comment */- these are also multi line commnets where there is o
 You can pick whichever ones runs the most smoothly on your laptop environment. 
 
 **keywords/Reserved Words:**'
+
 Swift has a defined set of keywords (including contextual ones), but Apple doesn’t
 publish “the number” as a stable count—the list evolves with time. Here is some
 examples fo the keywords/reserved, (Any, as, catch, false, is etc the list goes on and
@@ -89,16 +90,20 @@ Naming Conventions (Community Standards):
 -Methods can share a base name 
 
 **Statically typed:**
+
 Swift is statically typed with type inference (the compiler infers types but they’re checked at compile time). 
 
 **Strongly Typed**
+
 Swift does not allow us to mix unrelated types automatically we have to explicitly declare them.
 Every variable has a specific, declared (inferred) type, and that type cannot change once set. The type checking happens at the compile time. You don’t get implicit, lossy coercions across unrelated types; the compiler enforces type safety. 
 
 **Supports explicit and implicitly typed:**
+
 It supports both: we can declare types explicitly or the complier can do it.
 
 **Mutable/Immutable:**
+
 It lets us declare both types by following some rules-
 
 For Mutable type-
@@ -110,6 +115,7 @@ let declares constants (immutable bindings)
  This is enforced by the compiler. For value types (structs/enums), immutability also depends on whether the instance is stored in a let or var, and mutating methods are required to modify struct/enum state
 
 **Operators**
+
 Arithmetic (+ - * / %) for numeric types; overflow variants like &+ &- &*. Swift Documentation+1
 Comparison (== != < <= > >=) for comparable types. Swift Documentation
 Assignment/compound (=, +=, etc.). Swift Documentation
@@ -119,9 +125,11 @@ Bitwise & shifting (~ & | ^ << >>) for integer types.
 
 
 **Mixed Operations**
+
 Numeric operators generally do not implicitly mix types but if you perform an explicit conversion (Double(x), Int(y)) or use the same type on both sides it is allowed. 
 
 **Is Swift Bound**
+
 Identifier names (variables, types, functions)
 • Type binding: Compile time. Swift infers or checks the type at compile time and pins it (static types).
 • Address/storage binding: Run time.
@@ -151,6 +159,7 @@ Example code:
  **Limitations**
 
 **Built-in complex data type**
+
 Swift does have several built in complex data types. 
 Here are a few the rest can be found on the official site for swift. 
 
@@ -167,34 +176,40 @@ implicitly Unwrapped optional type:
 
 
 **Boolean values**
+
 Is a type of value whose instances are either true or false.
 It does not use 0/1 but instead uses Bool in condionals. 
 
 https://developer.apple.com/documentation/Swift/Bool
 
 **Conditional Statments**
+
 Swift has if, else, else if, gaurd can be used in place of lese as an prceed only if earlier condtion is approved. There are switch statments present used for matching purposes. Basic switch statement, interval matching, compound cases are all types of switch statements. Ternary condtional operator can be used as a shorter way of writing standard if/else statement. 
 
 https://www.codecademy.com/learn/learn-swift/modules/learn-swift-conditionals/cheatsheet
 https://vikramios.medium.com/swift-conditional-statements-loops-and-switch-statements-77f9b488925b
 
 **Code blocks**
+
 Code blocks can be delimited using curly braces{} in swift.
 
 https://www.programiz.com/swift-programming/expressions-statements-blocks?
 
 **Short Circuit**
+
 Swift uses short circuit evalutions for its logical AND(&&) and logical OR(||) operators.
 
 https://medium.com/@ayshindhe/short-circuiting-in-swift-a-simple-explanation-5be8358f20ca
 
 **Dangleing else problem**
+
 To address thsi problem swift requires the use of curly braces {} to explicitly define teh scope of if and else blocks. This helps remove the ambiguity in nested if else statements.
 
 https://en.wikipedia.org/wiki/Dangling_else
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/statements/
 
 **Switch/Case behaviour**
+
 Swift does use switch/case statements and in the cases where it does use it, it does not require a explicit break because if a matching case is found the code executed in the switch statement will automatically exit. 
 
 The continue statement is used in loop constructs to stop the current loop from iterating and move onto to the next one. 
@@ -202,12 +217,14 @@ The continue statement is used in loop constructs to stop the current loop from 
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/#Switch
 
 **Loop types and differences**
+
 Swift has the following types of loops, for in loop, while loop, repeat while loop, forEach loop.
 
 https://www.programiz.com/swift-programming/for-in-loop
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/
 
 **Scope of loop variable vs function block**
+
 In swift loop scope variable and function variables are not the same but they are similar.
 
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/declarations/
@@ -220,15 +237,18 @@ The basic syntax to declare a function in Swift is “func” keyword followed b
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/functions/
 
 **Function Placing**
+
 There is no particular order as to where the function has to be placed for it to run. The function can be anywhere in the file that is being run, and the compiler will parse through the file before running, thus the position of the function doesn't matter. The function has to be in scope for it to run. 
 https://www.appypievibe.ai/blog/swift-code/scope-context-swift-how-to/
 
 **Recursive Function**
+
 Yes, Swift supports recursion. Recursion is where a function calls itself ( can be used in scenarios like calculating a factorial of a number). 
 
 https://www.kodeco.com/books/swift-cookbook/v1.0/chapters/9-use-recursive-functions-in-swift
 
 **Multiple Parameters**
+
 Swift functions can accept multiple parameters. Yes, it can also take different data types. This can happen because each parameter is allowed to have a different type and still run. 
 
 Swift can return multiple values using a tuple, by making a compound value. The elements of a tuple can be given a name (alphabets or number).
@@ -236,6 +256,7 @@ Swift can return multiple values using a tuple, by making a compound value. The 
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/
 
 **By Pass refrence**
+
 Swift's default is pass by value for parameters. For value types, a copy is passed for the ref types; the reference itself is passed by value.
 Value types (struct, enum, tuple) → stored directly (stack), copied on write
 Reference types (class, closure) → instance stored on heap, reference stored on stack
@@ -244,6 +265,7 @@ In Swift, function arguments, parameters, and most local variables are stored on
 https://www.vadimbulavin.com/value-types-and-reference-types-in-swift/
 
 **Scoping rules**
+
 Code blocks are made using curly braces, and the code inside it remains inside that block; thus, when created, the visibility remains inside the block and will end suppose if the code block is destroyed. 
 Variables declared inside a function are local to the function itself.
 Anything outside that function will not be visible to the code inside that function.
@@ -251,6 +273,7 @@ Globe scope is when the variable is declared outsid ethe function and classes an
 Inner scpe variable can access outer scope but not the other way round 
 
 **Side effects in swift**
+
 Side effects are possible in Swift. A function might change external state, such as by modifying a global variable, changing a class property, or altering in-out parameters. However, Swift encourages safer patterns and has guardrails (as that was one of the main goals of why swift was created)
 Design patterns and Swift APIs encourage the use of pure functions.
 let creates immutable values to avoid unintended mutation. Like this there are some other for which you can find the details in the link below. So, Swift does allow side effects; the language rules just prevent accidental shared state and mutation.
@@ -260,17 +283,20 @@ https://docs.swift.org/swift-book/documentation/the-swift-programming-language/m
 
 
 **Local Variable Storing location**
+
 The local variables that are value types - usually Int, Struct, Bool, Tuple - are stored on the stack. Reference-type values (class instances) are allocated on the heap, and reference to them (the pointer) is stored on the stack. 
 
 https://www.vadimbulavin.com/value-types-and-reference-types-in-swift/
 
 **Other Characteristics**
+
 Swift has several other characteristics that are useful to know when learning about functions: Static vs dynamic dispatch: Value types struct/enum use static dispatch by default - i.e., compile-time binding. Classes can use dynamic dispatch by means of inheritance and override (runtime method lookup via v-table). First-class functions Functions can be stored in variables, passed as parameters, and returned by other functions. Closures: Swift does support closures - like lambdas - and they capture values from the surrounding scope.
 
 
 **Classes and inheritance**
 
 **Does Swift support objects or something similar**
+
 It folows the standard rules of coding convetions which can be found in other languages also like eg python. Swift is a object oriented programming language through classes and structures. 
 
 
@@ -280,6 +306,7 @@ https://docs.swift.org/swift-book/documentation/the-swift-programming-language/c
 
 **Naming conventions for classes, instance variables, functions**
 
+
 Class names start with UpperCamelCase
 methods + properties with lowerCamelCase
 constants like let with lowerCamelCase
@@ -287,6 +314,7 @@ Modules/Types with UpperCamelCase
 https://stackoverflow.com/questions/40228471/proper-namespacing-or-class-naming-convention-in-swift-frameworks-for-ios
 
 **Does swift have standard methods similar to toString() or __str__**
+
 Swift does not use toString() or __str__. It uses a standard way to get a string reprenstaion of an object by using String interpolation -> \(value). 
 
 example code:
@@ -301,6 +329,7 @@ https://docs.swift.org/swift-book/documentation/the-swift-programming-language/s
 https://developer.apple.com/documentation/swift/customstringconvertible
 
 **Inhertance in Swift and Muliple Inheritance**
+
 Swift supports single inhertance for classes, meaning it can only inherit from a single other class. Multiple inheritance is not allowedin swift due as it adds significant complexity which swift does not handle. 
 But instead swift uses protocols which achives similar benefits as in multiple inheritance. In this a class can conform to multiple protocols and implemnt behaviors as defined by each of the different protocols.
 
@@ -308,12 +337,14 @@ https://www.geeksforgeeks.org/swift/swift-inheritance/
 https://docs.swift.org/compiler/documentation/diagnostics/multiple-inheritance/
 
 **Overload methods**
+
 Swift allows method overloading, its where a class can have multiple methods with the same name but they have different signature. 
 Swift resolves the calls with the swifts complier, the complier examies the aviable methods in the classes and supperclasses. 
 
 https://stackoverflow.com/questions/64525102/swift-how-to-deal-with-method-overloads-where-only-the-return-type-differs-and
 
 **Important things to remember**
+
 Swift uses single inheritance but can use multple protocol which behave similar to multiple inhertance.
 classes are refrence typres while structs are value types 
 methods and properties must use override explicitly 
