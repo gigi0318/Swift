@@ -396,7 +396,9 @@ Class methods that can be overridden uses dynamic dispatch
 
 
 To learn swift:
+https://www.swift.org/documentation/api-design-guidelines/
 https://docs.vapor.codes/
+https://langdev.stackexchange.com/questions/116/what-are-the-downsides-of-having-types-for-floats-and-integers
 https://www.swift.org/documentation/?
 https://www.codecademy.com/learn/learn-swift?
 https://www.geeksforgeeks.org/swift/swift-tutorial/
@@ -408,7 +410,7 @@ wikipedia
 https://microsoft.github.io/swift-guide/Naming.html?
 https://swiftbydeya.com/swift-keywords/
 Hacking with swift.com
-Youtube sean allen code with chris etc
+Youtube swift tutorials
 Reddit formus
 https://langdev.stackexchange.com/questions/116/what-are-the-downsides-of-having-types-for-floats-and-integers
 
