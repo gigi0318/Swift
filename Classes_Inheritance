@@ -1,4 +1,4 @@
-**Creating an object**
+//Creating an object
 
 class Person {
     var firstName: String
@@ -12,16 +12,15 @@ class Person {
     }
 }
 
-**Giving the object class atributes**
+//Giving the object class atributes
 
 var firstName: String
 var lastName: String
 var age: Int
 
 
-**Giving the object functions**
-
-func fullName() -> String {
+//Giving the object functions
+    func fullName() -> String {
     return "\(firstName) \(lastName)"
 }
 
@@ -30,7 +29,7 @@ func haveBirthday() {
     print("Happy birthday, \(fullName())! You are now \(age).")
 }
 
-**Creating an object that inherits from the first object :Person**
+//Creating an object that inherits from the first object :Person
 
 class Student: Person {
     var studentID: String
@@ -51,7 +50,7 @@ class Student: Person {
     }
 }
 
-**Instantiate both types**
+//Instantiate both types
 
 let p = Person(firstName: "Spencer", lastName: "Lo", age: 18)
 print(p.fullName())
