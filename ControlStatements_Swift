@@ -1,3 +1,5 @@
+//single condtion and multi condtion if statments 
+
 let number = 10
 
 if number > 0 {
@@ -8,6 +10,7 @@ if number > 0 {
     print("Number is zero")
 }
 
+//multi condtion if statment with logical operator
 let year = 2024
 
 if year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) {
@@ -15,6 +18,9 @@ if year % 4 == 0 && (year % 100 != 0 || year % 400 == 0) {
 } else {
     print("\(year) is not a leap year")
 }
+
+//switch case statment 
+
 let grade = "B"
 
 switch grade {
@@ -31,6 +37,8 @@ case "F":
 default:
     print("Invalid grade")
 }
+
+// short circuit logic useing AND (&&)
 let number = 8
 
 if number > 0 && number % 2 == 0 {
@@ -38,6 +46,8 @@ if number > 0 && number % 2 == 0 {
 } else {
     print("\(number) is either not positive or not even.")
 }
+
+//if else statment for checking even or odd number 
 let number = 7
 
 if number % 2 == 0 {
