@@ -160,7 +160,11 @@ Example code:
      let x = five + 5 
      print(x)
 
- **Limitations**
+**Limitations**
+
+Swift does not allow implicit type conversion between numeric types such as int and double. Thus it makes type coversion explicit. 
+Swift arrys are homogenous meaning that the elements must be of the same type eg. elemnts can only be int or string but cannot contain both. 
+
 
 **Built-in complex data type**
 
@@ -231,7 +235,34 @@ https://docs.swift.org/swift-book/documentation/the-swift-programming-language/c
 
 In swift loop scope variable and function variables are not the same but they are similar.
 
+```swift
+// Loop scope vs function scope demonstration
+
+func demonstrateScope() {
+
+    // Function-scope variable
+    let functionValue = 100
+
+    // Loop with loop-scoped variable
+    for i in 1...3 {
+        let loopValue = i * 10
+        print("Inside loop → functionValue: \(functionValue), loopValue: \(loopValue)")
+    }
+
+    // functionValue is still accessible here
+    print("Outside loop → functionValue: \(functionValue)")
+
+    //  loopValue is NOT accessible here
+    // print(loopValue)  // This causes a compile-time error
+}
+
+demonstrateScope()
+
+```
+
+
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/declarations/
+
 
 ## 4. Functions
 
@@ -370,7 +401,8 @@ https://microsoft.github.io/swift-guide/Naming.html?
 https://swiftbydeya.com/swift-keywords/
 Hacking with swift.com
 Youtube sean allen code with chris etc
-Reddit formus 
+Reddit formus
+https://langdev.stackexchange.com/questions/116/what-are-the-downsides-of-having-types-for-floats-and-integers
 
 
 
