@@ -9,6 +9,10 @@ print(part1, part2)  // Hello World will print
 
 
 
+func factorial(_ n: Int) -> Int {
+    if n <= 1 { return 1 }
+    return n * factorial(n - 1)
+}
 
 
 
