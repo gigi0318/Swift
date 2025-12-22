@@ -1,3 +1,12 @@
+// eg of mimitations: compile error 
+let a= 1
+let b= 2.2
+let c= a+b 
+//convert int to double 
+//take homogenous array: this will cause compile error 
+let Arraym= [1,gigi,18.3]
+
+
 // you can run this code 
 //I have provided code for each of the ponters described in the read.me file 
 import Foundation
