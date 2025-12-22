@@ -227,13 +227,17 @@ https://docs.swift.org/swift-book/documentation/the-swift-programming-language/c
 **Loop types and differences**
 
 Swift has the following types of loops, for in loop, while loop, repeat while loop, forEach loop.
+for-in loop: itterates over ranges, arrays, dictionaries
+while loop: contion is checked before execution
+repeat-while: condtion is checked after iteration 
+for each: functional style iterating 
 
 https://www.programiz.com/swift-programming/for-in-loop
 https://docs.swift.org/swift-book/documentation/the-swift-programming-language/controlflow/
 
 **Scope of loop variable vs function block**
 
-In swift loop scope variable and function variables are not the same but they are similar.
+In swift loop scope variable and function variables are not the same but they follow Swift's block scope rules. 
 
 ```swift
 // Loop scope vs function scope demonstration
@@ -247,7 +251,7 @@ func demonstrateScope() {
     for i in 1...3 {
         let loopValue = i * 10
         print("Inside loop → functionValue: \(functionValue), loopValue: \(loopValue)")
-    }
+    }//i is not accessible here
 
     // functionValue is still accessible here
     print("Outside loop → functionValue: \(functionValue)")
@@ -332,7 +336,8 @@ Swift has several other characteristics that are useful to know when learning ab
 
 **Does Swift support objects or something similar**
 
-It folows the standard rules of coding convetions which can be found in other languages also like eg python. Swift is a object oriented programming language through classes and structures. 
+Yes Swifts supports ibject oriented programming through classes. Which support inhertance, sematics and dynamic dispatch. Swift also supports structs. Classes in swift can contain properties like instance variables, methods, intializers and can inherit from a single superclass ( multi class concept). Structs and enums are also aviable to use which provide object like behaviour. 
+It folows the standard rules of coding convetions which can be found in other languages also like eg python. 
 
 
 
@@ -350,7 +355,8 @@ https://stackoverflow.com/questions/40228471/proper-namespacing-or-class-naming-
 
 **Does swift have standard methods similar to toString() or __str__**
 
-Swift does not use toString() or __str__. It uses a standard way to get a string reprenstaion of an object by using String interpolation -> \(value). 
+Swift does not have standard methods similar to toString() or __str__. It Instead it uses a standard way to get a string reprenstaion of an object by using String interpolation -> \(value). 
+It provides CustomStringConvertible and description.
 
 example code:
 var myInteger:Int
@@ -374,15 +380,17 @@ https://docs.swift.org/compiler/documentation/diagnostics/multiple-inheritance/
 **Overload methods**
 
 Swift allows method overloading, its where a class can have multiple methods with the same name but they have different signature. 
-Swift resolves the calls with the swifts complier, the complier examies the aviable methods in the classes and supperclasses. 
+Swift resolves the calls with the swifts complier, at compile time by examing the method signatures, argument labels and type context.
 
 https://stackoverflow.com/questions/64525102/swift-how-to-deal-with-method-overloads-where-only-the-return-type-differs-and
 
 **Important things to remember**
 
 Swift uses single inheritance but can use multple protocol which behave similar to multiple inhertance.
-classes are refrence typres while structs are value types 
+Classes are refrence types while structs are value types 
 methods and properties must use override explicitly 
+Structs and enums use static dispatch 
+Class methods that can be overridden uses dynamic dispatch 
 
 **References:**
 
