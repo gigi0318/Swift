@@ -1,4 +1,6 @@
 # Swift: A Beginner Friendly Guide
+
+## 1. Swifts History and Introduction
  
 For my class CS330 I have to write a beginners guide to a language which I have learned before or worked in. I have chosen the language swift. I chose swift because I have only ever owned an Apple gadget, and I am curious on how Apple’s favorite language actually works. Swift is a modern, compiled programming language designed to be safe, fast, and expressive.
 It was created at Apple ( A team led by Chris Lattner) and announced in 2014; open‑sourced in 2015. It was designed to replace/complement Objective‑C with a safer type system, simpler syntax, dynamic dispatch, late binding, extensible programming  and modern tooling. Swift is made from a bunch of languages not just Objective C.
